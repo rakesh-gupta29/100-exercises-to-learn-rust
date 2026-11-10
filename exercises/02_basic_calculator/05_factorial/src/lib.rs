@@ -10,6 +10,17 @@
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
 
+// the return signature will not change for recursion since it is not returning it but just calling
+// it and waiting for response.
+
+fn factorial(n: u64) -> u64 {
+    if n < 1 {
+        return 1;
+    }
+
+    n * factorial(n - 1)
+}
+
 #[cfg(test)]
 mod tests {
     use crate::factorial;
